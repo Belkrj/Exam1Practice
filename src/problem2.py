@@ -73,6 +73,18 @@ def run_test_problem2a():
 
 
 def problem2a(circle, rectangle, window):
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
+    line = rg.Line(rectangle.get_upper_right_corner(), rectangle.get_lower_left_corner())
+    line.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
+    circle.fill_color = rectangle.outline_color
+    window.render()
 
     """
     See   problem2a_picture.pdf   in this project for pictures
@@ -101,9 +113,10 @@ def problem2a(circle, rectangle, window):
       :type circle:    rg.Circle
       :type rectangle: rg.Rectangle
       :type window:    rg.RoseWindow
+      
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -145,6 +158,17 @@ def run_test_problem2b():
 
 
 def problem2b(rect, n, delta, win):
+    rect.attach_to(win)
+    p1 = rg.Point(rect.corner_1.x - 2 * delta, rect.corner_1.y + 2 * delta)
+    p2 = rg.Point(rect.corner_2.x + 2 * delta, rect.corner_2.y - 2 * delta)
+    for k in range(n):
+        rect2 = rg.Rectangle(p1, p2)
+        rect2.attach_to(win)
+        win.render()
+        p1.x = p1.x - 2 * delta
+        p1.y = p1.y - 2 * delta
+        p2.x = p2.x - 2 * delta
+        p2.y = p2.y - 2 * delta
     """
     See   problem2b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
