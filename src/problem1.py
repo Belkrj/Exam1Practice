@@ -29,8 +29,8 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_problem1a()
-    #run_test_problem1b()
+    run_test_problem1a()
+    run_test_problem1b()
     run_test_problem1c()
 
 
@@ -221,7 +221,7 @@ def run_test_problem1b():
 def problem1b(m, f):
     l = (f * m) - m + 1
     count = 0
-    for k in range(m):
+    for k in range(l):
         if is_prime(k + m) is True:
             count = count + 1
     return count
