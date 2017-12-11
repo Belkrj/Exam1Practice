@@ -182,38 +182,38 @@ def run_test_problem0b():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected = 6
-    answer = problem0b(13)
+    expected = 1
+    answer = problem0b(2)
     print()
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 3
-    answer = problem0b(2)
+    expected = 6
+    answer = problem0b(13)
     print()
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 46
-    answer = problem0b(200)
+    expected = 9
+    answer = problem0b(25)
     print()
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 4:
-    expected = 0
+    expected = 46
     answer = problem0b(200)
     print()
     print('Test 4 expected:', expected)
-    print('       actual:  ', answer)
+    print('         actual:', answer)
 
 
 def problem0b(n):
     count = 0
-    for k in range(n):
-        if is_prime(n) is True:
+    for k in range(2, n + 1):
+        if is_prime(k) is True:
             count = count + 1
     return count
 
