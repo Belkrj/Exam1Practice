@@ -218,11 +218,10 @@ def run_test_problem1b():
     print('         Answer:', answer)
 
 
-
 def problem1b(m, f):
     l = (f * m) - m + 1
     count = 0
-    for k in range(l):
+    for k in range(m):
         if is_prime(k + m) is True:
             count = count + 1
     return count
@@ -316,12 +315,12 @@ def run_test_problem1c():
 
 def problem1c(n):
     total = 1
-    l = n - 1
-    for k in range(l):
-        if is_prime(k + 2) is True:
-            total = total * (k +2)
-    total = sum_of_digits(total)
-    return total
+    l = n + 1
+    for k in range(2, l):
+        if is_prime(k):
+            total *= k
+
+    return sum_of_digits(total)
 
 
     """
@@ -348,7 +347,7 @@ def problem1c(n):
            and the sum of the digits in 223092870 is 33.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################

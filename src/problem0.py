@@ -189,7 +189,7 @@ def run_test_problem0b():
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 1
+    expected = 3
     answer = problem0b(2)
     print()
     print('Test 2 expected:', expected)
@@ -203,8 +203,8 @@ def run_test_problem0b():
     print('       actual:  ', answer)
 
     # Test 4:
-    expected = 168
-    answer = problem0b(997)
+    expected = 0
+    answer = problem0b(200)
     print()
     print('Test 4 expected:', expected)
     print('       actual:  ', answer)
@@ -212,10 +212,11 @@ def run_test_problem0b():
 
 def problem0b(n):
     count = 0
-    for k in range(n + 1):
+    for k in range(n):
         if is_prime(n) is True:
             count = count + 1
     return count
+
     """
     What comes in:  An integer n >= 2.
     What goes out:

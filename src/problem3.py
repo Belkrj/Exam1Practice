@@ -2,8 +2,8 @@
 PRACTICE Test 1, problem 3.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Robert Belk.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -105,6 +105,7 @@ def run_test_problem3a():
 
 
 def problem3a(window, point, n):
+
     """
     See   problem3a_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
