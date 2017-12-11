@@ -37,7 +37,7 @@ def main():
 def run_test_problem3a():
     """ Tests the   problem3a   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   5   ** tests (we wrote four for you).
     # ------------------------------------------------------------------
@@ -105,6 +105,16 @@ def run_test_problem3a():
 
 
 def problem3a(window, point, n):
+    point2 = rg.Point(point.x, point.y + 100)
+    line = rg.Line(point, point2)
+    line.thickness = 1
+    for k in range (n):
+        line.attach_to(window)
+        window.render()
+        point.x = point.x + 20
+        point.y = point.y + 10
+        if line.thickness < 13:
+            line.thickness = line.thickness + 2
 
     """
     See   problem3a_picture.pdf   in this project for pictures
@@ -138,7 +148,7 @@ def problem3a(window, point, n):
         :type n:      int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -166,6 +176,7 @@ def run_test_problem3b():
 
 
 def problem3b(m, point1):
+    
     """
     See   problem3b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
